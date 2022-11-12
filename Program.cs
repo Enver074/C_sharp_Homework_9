@@ -49,6 +49,28 @@ void Task66(){
 SumNumbers(M, N, 0);
 }
 
+void Task68(){
+    Console.Clear();
+    Console.WriteLine("Задача 68");
+    Console.WriteLine("");
+
+    int M = InputNumbers("Введите число M: ");
+    int N = InputNumbers("Введите число N: ");
+
+    Console.WriteLine($"{AkkermanFunction(M, N)}");
+
+    int AkkermanFunction(int M, int N){
+
+        if (M == 0) 
+            return N + 1;
+
+        else if (M > 0 && N == 0) 
+            return AkkermanFunction(M - 1, 1);
+
+        else 
+            return AkkermanFunction(M - 1, AkkermanFunction(M, N - 1));
+    }
+}
 
 int InputNumbers(string input)
 {
