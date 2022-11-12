@@ -29,3 +29,30 @@ void Task64(){
     return (end + ", " + PrintNumbers(end - 1, start));
     }
 }
+
+void Task66(){
+    Console.Clear();
+    Console.WriteLine("Задача 66");
+    Console.WriteLine("");
+
+    int M = InputNumbers("Введите число M: ");
+    int N = InputNumbers("Введите число N: ");
+
+    void SumNumbers(int start, int end, int Sum){
+    if (start > end){
+        Console.WriteLine($"Сумма натуральных элементов в промежутке от M до N: {Sum}"); 
+        return;
+        }
+    Sum = Sum + (M++);
+    SumNumbers(M, N, Sum);
+    }
+SumNumbers(M, N, 0);
+}
+
+
+int InputNumbers(string input)
+{
+    Console.Write(input);
+    int output = Convert.ToInt32(Console.ReadLine()); 
+    return output;
+}
