@@ -15,6 +15,20 @@
 // m = 2, n = 3 -> A(m,n) = 9
 // m = 3, n = 2 -> A(m,n) = 29
 
+int TaskNumber = InputNumbers("Выберите задачу(64, 66, 68): ");
+
+switch(TaskNumber){
+    case 64:
+        Task64();
+        break;
+    case 66:
+        Task66();
+        break;
+    case 68:
+        Task68();
+        break;
+}
+
 void Task64(){
     Console.Clear();
     Console.WriteLine("Задача 64");
